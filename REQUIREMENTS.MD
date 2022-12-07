@@ -373,7 +373,7 @@
 
 ## Submission
 In addition to turning in the project via Canvas, students will submit a 5 minute video walkthrough of their application by the day it is due. They will link the video on the README of their application.
-- This video should showcase the functionality of each of the tiers.
+- This video should showcase the functionality of each of the tiers - you do not need to appear on camera or talk, it can just be a screen-share video 
 - It's important that we see everything worked fine on your machine, just incase there are issues running it on ours.
 - We are NOT grading the quality of the video, we're solely using it to confirm that your project works everywhere you got it to work.
 
