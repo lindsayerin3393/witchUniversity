@@ -35,6 +35,7 @@ Other client side libraries you will need
 - build incrementally! 
 - if you have an error, fix the error, before attempting to **add** functionality
 - Turn in a short (2 - 5 minute) video showing each tier and the functionality you accomplished
+- This can just be a screenshare video (on mac, it's command + shift + 5 to open that window, and escape to close it)
 
 ## Notes
 
