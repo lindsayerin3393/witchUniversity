@@ -371,6 +371,11 @@
 
 - `RUBRIC.md` - contains the grading rubric for additional factors, as well as the formula for calculating the total score
 
+## Submission
+In addition to turning in the project via Canvas, students will submit a 5 minute video walkthrough of their application by the day it is due. They will link the video on the README of their application.
+- This video should showcase the functionality of each of the tiers
+- It's important that we see everything worked fine on your machine, just incase there are issues running it on ours.
+
 ## Evaluation
 
 - Requirements score (70%)
