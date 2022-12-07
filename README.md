@@ -22,6 +22,7 @@ Other client side libraries you will need
 - react-router-dom
 - redux-thunk
 - axios
+- any others you'd like to bring in
 
 ### Requirements + Rubric (see rubric file)
 
@@ -33,7 +34,13 @@ Other client side libraries you will need
 - you will have ample time to complete project, NO EXTENSIONS WILL BE GIVEN
 - build incrementally! 
 - if you have an error, fix the error, before attempting to **add** functionality
+- Turn in a short (2 - 5 minute) video showing each tier and the functionality you accomplished
 
+## Notes
+
+- This is NOT the same project for each class, so even if you heard about a previous class's project don't make assumptions.
+- You are not graded on the passing of the tests, but the achieved functionality of the project.
+- Depending on the version of the project your class gets, you may only have tests through the first tier. If this is the case, think of them as "training wheels".
 
 ### Views and Functionality
 
