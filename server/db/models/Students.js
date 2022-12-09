@@ -1,4 +1,5 @@
 const Sequelize = require("sequelize");
+const CampusesModel = require("./Campuses");
 const db = require("./database");
 
 const Students = db.define("students", {
@@ -37,5 +38,12 @@ const Students = db.define("students", {
     },
   },
 });
+
+Students.findCampus = async function () {
+  const campus = await Students.findAll({
+    include: { model: CampusesModel, as: "pupil" },
+  });
+  return campus;
+};
 
 module.exports = Students;

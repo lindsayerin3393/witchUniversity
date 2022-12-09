@@ -13,9 +13,10 @@ router.get("/", async (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   try {
     const campus = await CampusesModel.findByPk(req.params.id);
-    if (!campus) res.sendStatus(404);
+    const campusWStudents = await CampusesModel.findStudents(campus.id);
+    if (!campusWStudents) res.sendStatus(404);
     else {
-      res.send(campus);
+      res.send(campusWStudents);
     }
   } catch (err) {
     next(err);

@@ -1,5 +1,6 @@
 const Sequelize = require("sequelize");
 const db = require("./database");
+const Students = require("./Students");
 
 const CampusesModel = db.define("campuses", {
   name: {
@@ -25,5 +26,12 @@ const CampusesModel = db.define("campuses", {
     type: Sequelize.TEXT,
   },
 });
+
+CampusesModel.findStudents = async function (id) {
+  const students = await CampusesModel.findByPk(id, {
+    include: { model: Students, as: "attendee" },
+  });
+  return students;
+};
 
 module.exports = CampusesModel;

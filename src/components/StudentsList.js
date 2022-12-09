@@ -20,6 +20,7 @@ const StudentsList = () => {
             </Link>
             <h4>{student.email}</h4>
             <h4>{student.gpa}</h4>
+            <h4>{student.campusId}</h4>
             <img src={student.imageUrl} alt="image" />
           </div>
         );
