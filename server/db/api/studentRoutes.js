@@ -13,13 +13,21 @@ router.get("/", async (req, res, next) => {
 router.get("/:id", async (req, res, next) => {
   try {
     const student = await Students.findByPk(req.params.id);
-    // const studentWCampus = await Students.findCampus(student.id);
+    // const studentWCampus = await Students.findCampus(student.campusId);
     if (!student) res.sendStatus(404);
     else {
       res.send(student);
     }
   } catch (err) {
     next(err);
+  }
+});
+
+router.post("/", async (req, res, next) => {
+  try {
+    res.status(201).send(await Students.create(req.body));
+  } catch (error) {
+    next(error);
   }
 });
 

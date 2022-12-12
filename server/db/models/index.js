@@ -16,7 +16,7 @@ const Students = require("./Students");
 // Example:
 //
 // Puppy.belongsTo(Owner)
-Students.belongsTo(CampusesModel, { as: "pupil" });
+Students.belongsTo(CampusesModel);
 CampusesModel.hasMany(Students, { as: "attendee" });
 
 module.exports = {

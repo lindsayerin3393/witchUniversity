@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import AddStudent from "./addStudent/AddStudent";
 import { selectStudents, fetchStudentsAsync } from "./studentsListSlice";
 
 const StudentsList = () => {
@@ -25,6 +26,7 @@ const StudentsList = () => {
           </div>
         );
       })}
+      <AddStudent />
     </div>
   );
 };

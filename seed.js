@@ -2,14 +2,14 @@ const { db, Students, CampusesModel } = require("./server/db/models");
 
 const seed = async () => {
   await db.sync({ force: true });
-  const halloweentown = await Campuses.create({
+  const halloweentown = await CampusesModel.create({
     name: "Halloweentown University",
     imageUrl:
       "https://i.etsystatic.com/27844344/r/il/1c4fc4/3410057599/il_fullxfull.3410057599_fhzn.jpg",
     address: "Salem, Massachusetts",
     description: "The best schools for young witches and Wizards!!!",
   });
-  const witchesUniversity = await Campuses.create({
+  const witchesUniversity = await CampusesModel.create({
     name: "Witch University",
     imageUrl:
       "https://www.hekatesfinishingschool.com/wp-content/uploads/2020/01/HFS-logo-1mb.png",

@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { selectCampuses, fetchCampusesAsync } from "./campusesSlice";
+import AddCampus from "./addCampus/AddCampus";
 
 const Campuses = () => {
   const dispatch = useDispatch();
@@ -21,6 +22,7 @@ const Campuses = () => {
           </div>
         );
       })}
+      <AddCampus />
     </div>
   );
 };
