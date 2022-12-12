@@ -40,10 +40,17 @@ const Students = db.define("students", {
 });
 
 Students.findCampus = async function (id) {
-  const student = await Students.findByPk(id);
-  const studentWCampus = await student.getPupil();
-  console.log(studentWCampus);
-  return student;
+  const student = findByPk(id);
+  const campusId = student.campusId;
+  const campus = await Students.findByPk(id, {
+    include: {
+      model: CampusesModel,
+    },
+    where: {
+      id: campusId,
+    },
+  });
+  return campus;
 };
 
 module.exports = Students;

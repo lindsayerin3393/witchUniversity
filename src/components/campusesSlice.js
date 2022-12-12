@@ -28,6 +28,22 @@ export const addCampusesAsync = createAsyncThunk(
   }
 );
 
+export const deleteCampusAsync = createAsyncThunk(
+  "campuses/deleteCampus",
+  async (id, name, description, imageUrl) => {
+    const { data } = await axios.delete(
+      `http://localhost:3000/api/campuses/${id}`,
+      {
+        id,
+        name,
+        description,
+        imageUrl,
+      }
+    );
+    return data;
+  }
+);
+
 export const campusesSlice = createSlice({
   name: "campuses",
   initialState: [],

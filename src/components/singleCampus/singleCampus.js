@@ -10,13 +10,12 @@ const Campus = () => {
   useEffect(() => {
     dispatch(fetchCampusAsync(id));
   }, [dispatch, id]);
-  console.log(campus.attendee);
   return (
     <div key={campus.id}>
       <h4>{campus.description}</h4>
       <h4>{campus.address}</h4>
       <img src={campus.imageUrl} alt="image" />
-      {/* <h4>{campus.student.firstName}</h4> */}
+      <h4>{campus.students}</h4>
       {/* <ul>
         Students:
         <li>{campus}</li>

@@ -29,7 +29,7 @@ const CampusesModel = db.define("campuses", {
 
 CampusesModel.findStudents = async function (id) {
   const students = await CampusesModel.findByPk(id, {
-    include: { model: Students, as: "attendee" },
+    include: { model: Students },
   });
   return students;
 };
