@@ -31,17 +31,14 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-// router.delete("/", async (req, res, next) => {
-//   try {
-//     const school = await CampusesModel.findAll({
-//       where: { id: id },
-//     });
-//     await school.destroy;
-//     res.send(school);
-//   } catch (err) {
-//     next(err);
-//   }
-// });
+router.put("/:id", async (req, res, next) => {
+  try {
+    const campus = await CampusesModel.findByPk(req.params.id);
+    res.send(await campus.update(req.body));
+  } catch (error) {
+    next(error);
+  }
+});
 
 router.delete("/:id", async (req, res, next) => {
   try {

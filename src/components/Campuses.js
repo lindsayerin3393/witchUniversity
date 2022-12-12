@@ -14,22 +14,19 @@ const Campuses = () => {
   useEffect(() => {
     dispatch(fetchCampusesAsync());
   }, [dispatch]);
-  // const handleDelete = async (evt) => {
-  //   evt.preventDefault();
-  //   await dispatch(deleteCampusAsync({ id, name, description, imageUrl }));
-  // };
   return (
     <div>
       {campuses.map((campus) => {
         return (
           <div key={campus.id}>
-            <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+            <Link to={`/campuses/${campus.id}`} className="name">
+              {campus.name}
+            </Link>
+            <h4 className="italicized">{campus.address}</h4>
             <h4>{campus.description}</h4>
-            <h4>{campus.address}</h4>
             <img src={campus.imageUrl} alt="image" />
             <button
               type="delete"
-              // onClick={handleDelete}
               onClick={async (evt) => {
                 evt.preventDefault();
                 await dispatch(
@@ -40,6 +37,7 @@ const Campuses = () => {
                     campus.name
                   )
                 );
+                await dispatch(fetchCampusesAsync());
               }}
             >
               Remove Campus!

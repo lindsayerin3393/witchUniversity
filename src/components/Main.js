@@ -11,12 +11,13 @@ const Main = () => {
   return (
     <div>
       <nav>
-        <div> {/* <Link to="/">Goodie Bag!</Link> */}</div>
-        <div>
-          <Link to="/students">Students!</Link>
-        </div>
-        <div>
-          <Link to="/campuses">Campuses!</Link>
+        <div id="navbar" className="row">
+          <div>
+            <Link to="/students">Students!</Link>
+          </div>
+          <div>
+            <Link to="/campuses">Campuses!</Link>
+          </div>
         </div>
       </nav>
       <main>
@@ -27,7 +28,6 @@ const Main = () => {
           <Route path="/students" element={<StudentsList />} />
           <Route path="/students/:id" element={<Student />} />
           <Route path="/campuses/:id" element={<Campus />} />
-          {/* <Route path="/candies/:id" element={<Candy />} /> */}
         </Routes>
       </main>
     </div>

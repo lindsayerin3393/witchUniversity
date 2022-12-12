@@ -1,0 +1,25 @@
+#navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #eee;
+  color: gray;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.italicized {
+  font-style: italic;
+}
+
+.name {
+  flex-direction: center;
+}
+
+.bold {
+  font-weight: bolder;
+}

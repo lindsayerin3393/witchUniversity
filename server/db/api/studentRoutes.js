@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Campuses, Students } = require("../models");
+const { CampusesModel, Students } = require("../models");
 
 router.get("/", async (req, res, next) => {
   try {
@@ -12,8 +12,9 @@ router.get("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const student = await Students.findByPk(req.params.id);
-    // const studentWCampus = await Students.findCampus(student.campusId);
+    const student = await Students.findByPk(req.params.id, {
+      include: CampusesModel,
+    });
     if (!student) res.sendStatus(404);
     else {
       res.send(student);
@@ -31,13 +32,30 @@ router.post("/", async (req, res, next) => {
   }
 });
 
-router.delete("/:id", async (req, res, next) => {
+router.put("/:id", async (req, res, next) => {
   try {
-    const student = await Students.findByPk(req.params.id);
-    await student.destroy();
-    res.send(student);
+    const student = await Student.findByPk(req.params.id);
+    res.send(await student.update(req.body));
   } catch (error) {
     next(error);
+  }
+});
+
+router.delete("/:id", async (req, res, next) => {
+  try {
+    const deletedStudent = await Students.findByPk(req.params.id);
+    if (!deletedStudent) {
+      res.sendStatus(404);
+    } else {
+      await Students.destroy({
+        where: {
+          id: req.params.id,
+        },
+      });
+      res.sendStatus(204);
+    }
+  } catch (err) {
+    next(err);
   }
 });
 

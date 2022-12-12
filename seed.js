@@ -22,7 +22,7 @@ const seed = async () => {
     lastName: "Granger",
     email: "hermione.granger@hogsmeade.com",
     imageUrl:
-      "https://static.wikia.nocookie.net/characters/images/a/a5/Latest_%2810%29.jpg/revision/latest/scale-to-width-down/1200?cb=20141230074301",
+      "https://cdn.vox-cdn.com/thumbor/eRAw0VxQjQddtw7Bg8P_YbGpO0g=/0x0:1024x768/1400x1400/filters:focal(408x210:570x372):format(jpeg)/cdn.vox-cdn.com/uploads/chorus_image/image/51000507/harry-potter-top-10-hermione-granger-moments-hermione-granger-358045.0.jpg",
     gpa: 4.0,
     campusId: witchesUniversity.id,
   });

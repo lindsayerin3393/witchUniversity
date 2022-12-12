@@ -12,14 +12,26 @@ const Campus = () => {
   }, [dispatch, id]);
   return (
     <div key={campus.id}>
+      <h2>{campus.name}</h2>
+      <h3 className="italicized">{campus.address}</h3>
       <h4>{campus.description}</h4>
-      <h4>{campus.address}</h4>
       <img src={campus.imageUrl} alt="image" />
-      <h4>{campus.students}</h4>
-      {/* <ul>
-        Students:
-        <li>{campus}</li>
-      </ul> */}
+      <h4 className="bold">Students:</h4>
+      <div>
+        {campus.students && campus.students.length
+          ? campus.students.map((student) => {
+              return (
+                <>
+                  <div key={student.id}>
+                    <h4>
+                      {student.firstName} {student.lastName}
+                    </h4>
+                  </div>
+                </>
+              );
+            })
+          : null}
+      </div>
     </div>
   );
 };
