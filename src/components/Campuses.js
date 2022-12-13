@@ -18,13 +18,13 @@ const Campuses = () => {
     <div>
       {campuses.map((campus) => {
         return (
-          <div key={campus.id}>
+          <div id="campuses" key={campus.id}>
             <Link to={`/campuses/${campus.id}`} className="name">
               {campus.name}
             </Link>
             <h4 className="italicized">{campus.address}</h4>
             <h4>{campus.description}</h4>
-            <img src={campus.imageUrl} alt="image" />
+            <img src={campus.imageUrl} alt="image" id="image" />
             <button
               type="delete"
               onClick={async (evt) => {

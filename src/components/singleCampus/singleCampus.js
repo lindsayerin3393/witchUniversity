@@ -2,14 +2,20 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { selectCampus, fetchCampusAsync } from "./campusSlice";
+import EditCampus from "./EditCampus";
 
 const Campus = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const campus = useSelector(selectCampus);
+  // const [campusId, setCampusId] = useState();
   useEffect(() => {
     dispatch(fetchCampusAsync(id));
   }, [dispatch, id]);
+  // const handleClick = (student) => {
+  //   student.campusId = null;
+  //   console.log(student);
+  // };
   return (
     <div key={campus.id}>
       <h2>{campus.name}</h2>
@@ -26,12 +32,16 @@ const Campus = () => {
                     <h4>
                       {student.firstName} {student.lastName}
                     </h4>
+                    <button onClick={(e) => setCampusId(null)}>
+                      Unregister
+                    </button>
                   </div>
                 </>
               );
             })
           : null}
       </div>
+      <EditCampus campus={campus} />
     </div>
   );
 };

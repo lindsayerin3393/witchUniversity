@@ -21,8 +21,10 @@ const Main = () => {
         </div>
       </nav>
       <main>
-        <h1>Welcome to our School Selection!</h1>
-        <p>Decide where you'd like to learn witchcraft and Wizardry!!!</p>
+        <h1 id="header">Welcome to our School Selection!</h1>
+        <p id="header">
+          Decide where you'd like to learn witchcraft and Wizardry!!!
+        </p>
         <Routes>
           <Route path="/campuses" element={<Campuses />} />
           <Route path="/students" element={<StudentsList />} />

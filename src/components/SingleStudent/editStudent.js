@@ -11,9 +11,9 @@ const EditStudent = (props) => {
   const id = props.student.id;
   // const student = useSelector(selectStudent);
   // const { id } = useParams();
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState(props.student.firstName);
+  const [lastName, setLastName] = useState(props.student.lastName);
+  const [email, setEmail] = useState(props.student.email);
   // const setFirstName = (id) => {
   //   state.props.student.firstname = e.target.value;
   // };
@@ -27,7 +27,6 @@ const EditStudent = (props) => {
     setEmail("");
     await dispatch(fetchStudentAsync(id));
   };
-  // console.log(firstName);
   return (
     <>
       <form
@@ -45,7 +44,7 @@ const EditStudent = (props) => {
 
         <label>Edit Student Last Name:</label>
         <input
-          placeholder={props.student.lastName}
+          // placeholder={props.student.lastName}
           name="lastName"
           value={lastName}
           type="text"
@@ -54,6 +53,7 @@ const EditStudent = (props) => {
 
         <label>Edit Student Email:</label>
         <input
+          // placeholder={props.student.email}
           name="email"
           value={email}
           type="email"
