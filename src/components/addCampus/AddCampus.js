@@ -8,21 +8,12 @@ const AddCampus = () => {
   const [address, setAddress] = useState("");
 
   const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchCampusesAsync());
-  // }, [dispatch]);
   const handleSubmit = async (evt) => {
     evt.preventDefault();
     await dispatch(addCampusesAsync({ name, address }));
     setName("");
     setAddress("");
   };
-
-  // const handleDelete = async (evt) => {
-  //   evt.preventDefault();
-  //   await dispatch(deleteTodoAsync({ id, taskName, assignee }));
-  //   navigate("/");
-  // };
 
   return (
     <>

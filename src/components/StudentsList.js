@@ -16,37 +16,38 @@ const StudentsList = () => {
   }, [dispatch]);
   return (
     <div>
-      {students.map((student) => {
-        return (
-          <div key={student.id}>
-            <Link to={`/students/${student.id}`}>
-              {student.firstName} {student.lastName}
-            </Link>
-            <h4>{student.email}</h4>
-            <h4>{student.gpa}</h4>
-            <h4>{student.campusId}</h4>
-            <img src={student.imageUrl} alt="image" />
-            <button
-              type="delete"
-              onClick={async (evt) => {
-                evt.preventDefault();
-                await dispatch(
-                  deleteStudentAsync(
-                    student.id,
-                    student.firstName,
-                    student.lastName,
-                    student.email,
-                    student.gpa
-                  )
-                );
-                await dispatch(fetchStudentsAsync());
-              }}
-            >
-              Remove Student!
-            </button>
-          </div>
-        );
-      })}
+      <div>
+        {students.map((student) => {
+          return (
+            <div key={student.id} id="students">
+              <Link to={`/students/${student.id}`}>
+                {student.firstName} {student.lastName}
+              </Link>
+              <h4>Email: {student.email}</h4>
+              <h4>GPA: {student.gpa}</h4>
+              <img src={student.imageUrl} alt="image" id="image" />
+              <button
+                type="delete"
+                onClick={async (evt) => {
+                  evt.preventDefault();
+                  await dispatch(
+                    deleteStudentAsync(
+                      student.id,
+                      student.firstName,
+                      student.lastName,
+                      student.email,
+                      student.gpa
+                    )
+                  );
+                  await dispatch(fetchStudentsAsync());
+                }}
+              >
+                Remove Student!
+              </button>
+            </div>
+          );
+        })}
+      </div>
       <AddStudent />
     </div>
   );

@@ -4,12 +4,10 @@ import { Link, Route, Routes } from "react-router-dom";
 import StudentsList from "./StudentsList";
 import Student from "./SingleStudent/SingleStudent";
 import Campus from "./singleCampus/singleCampus";
-/*
-    This is you entry point for your routes
-*/
+
 const Main = () => {
   return (
-    <div>
+    <div id="body">
       <nav>
         <div id="navbar" className="row">
           <div>

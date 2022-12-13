@@ -14,16 +14,17 @@ const Student = () => {
 
   return (
     <div>
-      <div key={student.id}>
+      <div key={student.id} id="students">
         <h3>
           {student.firstName} {student.lastName}
         </h3>
-        <h4>Contact Email: {student.email}</h4>
-        <h4>GPA: {student.gpa}</h4>
+        <p>Contact Email: {student.email}</p>
+        <p>GPA: {student.gpa}</p>
         <div>
-          {student.campus && <h4>Current School: {student.campus.name}</h4>}
+          {student.campus && <p>Current School: {student.campus.name}</p>}
         </div>
-        <img src={student.imageUrl} alt="image" />
+        <img src={student.imageUrl} alt="image" id="image" />
+        <h3>Update this Student's Info:</h3>
         <EditStudent student={student} />
       </div>
     </div>

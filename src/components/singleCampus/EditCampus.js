@@ -4,8 +4,8 @@ import { fetchCampusAsync, editCampusAsync } from "./campusSlice";
 
 const EditCampus = (props) => {
   const id = props.campus.id;
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
+  const [name, setName] = useState(props.campus.name);
+  const [address, setAddress] = useState(props.campus.address);
   const dispatch = useDispatch();
 
   const handleSubmit = async (evt) => {
@@ -21,7 +21,6 @@ const EditCampus = (props) => {
       <form id="edit-campus-form" key={props.campus.id} onSubmit={handleSubmit}>
         <label>Edit Campus Name:</label>
         <input
-          placeholder={props.campus.name}
           name="name"
           value={name}
           type="text"
@@ -30,7 +29,6 @@ const EditCampus = (props) => {
 
         <label>Edit Campus Address:</label>
         <input
-          placeholder={props.campus.address}
           name="address"
           value={address}
           type="text"

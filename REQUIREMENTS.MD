@@ -153,13 +153,13 @@
 
   <details>
 
-- [X] Write a component to display a form for adding a new campus that contains inputs for _at least_ the name and address.
-- [X] Display this component as part of the campuses view, alongside the list of campuses
+- [x] Write a component to display a form for adding a new campus that contains inputs for _at least_ the name and address.
+- [x] Display this component as part of the campuses view, alongside the list of campuses
 
 - Submitting the form with a valid name/address should:
 
-  - [X] Make an AJAX request that causes the new campus to be persisted in the database
-  - [X] Add the new campus to the list of campuses without needing to refresh the page
+  - [x] Make an AJAX request that causes the new campus to be persisted in the database
+  - [x] Add the new campus to the list of campuses without needing to refresh the page
 
   </details>
 
@@ -167,12 +167,13 @@
 
   <details>
 
-- [X] Write a component to display a form for adding a new student that contains inputs for _at least_ first name, last name and email
-- [X] Display this component as part of the students view, alongside the list of students
+- [x] Write a component to display a form for adding a new student that contains inputs for _at least_ first name, last name and email
+- [x] Display this component as part of the students view, alongside the list of students
 
 - Submitting the form with a valid first name/last name/email should:
-  - [X] Make an AJAX request that causes the new student to be persisted in the database
-  - [X] Add the new student to the list of students without needing to refresh the page
+
+  - [x] Make an AJAX request that causes the new student to be persisted in the database
+  - [x] Add the new student to the list of students without needing to refresh the page
 
   </details>
 
@@ -186,17 +187,17 @@
 
   <details>
 
-- [X] Write a route to add a new campus
+- [x] Write a route to add a new campus
 
-  </details>
+</details>
 
 #### Student
 
   <details>
 
-- [X] Write a route to add a new student
+- [x] Write a route to add a new student
 
-  </details>
+</details>
 
 </details>
 
@@ -214,11 +215,11 @@
 
   <details>
 
-- [X] In the campuses view, include an `X` button next to each campus
+- [x] In the campuses view, include an `X` button next to each campus
 - Clicking the `X` button should:
 
-  - [X] Make an AJAX request that causes that campus to be removed from database
-  - [X] Remove the campus from the list of campuses without needing to refresh the page
+  - [x] Make an AJAX request that causes that campus to be removed from database
+  - [x] Remove the campus from the list of campuses without needing to refresh the page
 
   </details>
 
@@ -226,11 +227,11 @@
 
   <details>
 
-- [X] In the students view, include an `X` button next to each student
+- [x] In the students view, include an `X` button next to each student
 - Clicking the `X` button should:
 
-  - [X] Make an AJAX request that causes that student to be removed from database
-  - [X] Remove the student from the list of students without needing to refresh the page
+  - [x] Make an AJAX request that causes that student to be removed from database
+  - [x] Remove the student from the list of students without needing to refresh the page
 
   </details>
 
@@ -244,17 +245,17 @@
 
   <details>
 
-- [X] Write a route to remove a campus (based on its id)
+- [x] Write a route to remove a campus (based on its id)
 
-  </details>
+</details>
 
 #### Student
 
   <details>
 
-- [X] Write a route to remove a student (based on their id)
+- [x] Write a route to remove a student (based on their id)
 
-  </details>
+</details>
 
 </details>
 
@@ -272,11 +273,12 @@
 
   <details>
 
-- [ ] Write a component to display a form updating _at least_ a campus's name and address
-- [ ] Display this component as part of the campus view
+- [X]] Write a component to display a form updating _at least_ a campus's name and address
+- [x] Display this component as part of the campus view
   - Submitting the form with valid data should:
-- [ ] Make an AJAX request that causes that campus to be updated in the database
-- [ ] Update the campus in the current view without needing to refresh the page
+- [x] Make an AJAX request that causes that campus to be updated in the database
+- [x] Update the campus in the current view without needing to refresh the page
+
   - [ ] In the campus view, display an `Unregister` button next to each of its students, which removes the student from the campus (in the database as well as this view); hint: the student is still in the database but is no longer associated with the campus
 
   </details>
@@ -285,13 +287,13 @@
 
   <details>
 
-- [X] Write a component to display a form updating a student
-- [X] Display this component as part of the student view
+- [x] Write a component to display a form updating a student
+- [x] Display this component as part of the student view
 - Submitting the form with valid data should:
-- [ ] Make an AJAX request that causes that student to be updated in the database
-- [ ] Update the student in the current view without needing to refresh the page
+- [x] Make an AJAX request that causes that student to be updated in the database
+- [x] Update the student in the current view without needing to refresh the page
 
-  </details>
+</details>
 
 </details>
 
@@ -303,7 +305,7 @@
 
 <details>
 
-- [ ] Write a route to update an existing campus
+- [x] Write a route to update an existing campus
 
 </details>
 
@@ -311,7 +313,7 @@
 
 <details>
 
-- [ ] Write a route to update an existing student
+- [x] Write a route to update an existing student
 
 </details>
 

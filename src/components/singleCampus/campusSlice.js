@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { unregisterStudentAsync } from "../SingleStudent/studentSlice";
 
 const initialState = {};
 
@@ -40,6 +41,11 @@ const campusSlice = createSlice({
     });
     builder.addCase(editCampusAsync.fulfilled, (state, action) => {
       return action.payload;
+    });
+    builder.addCase(unregisterStudentAsync.fulfilled, (state, action) => {
+      state.students = state.students.filter(
+        (student) => student.id !== action.payload.id
+      );
     });
   },
 });

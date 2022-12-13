@@ -17,7 +17,7 @@ export const addCampusesAsync = createAsyncThunk(
   "campuses/addCampuses",
   async ({ name, address }) => {
     try {
-      const { data } = await axios.post("http://localhost:3000/api/campuses", {
+      const { data } = await axios.post("/api/campuses", {
         name,
         address,
       });
@@ -31,15 +31,12 @@ export const addCampusesAsync = createAsyncThunk(
 export const deleteCampusAsync = createAsyncThunk(
   "campuses/deleteCampus",
   async (id, name, description, imageUrl) => {
-    const { data } = await axios.delete(
-      `http://localhost:3000/api/campuses/${id}`,
-      {
-        id,
-        name,
-        description,
-        imageUrl,
-      }
-    );
+    const { data } = await axios.delete(`/api/campuses/${id}`, {
+      id,
+      name,
+      description,
+      imageUrl,
+    });
     return data;
   }
 );

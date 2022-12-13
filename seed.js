@@ -6,7 +6,7 @@ const seed = async () => {
     name: "Halloweentown University",
     imageUrl:
       "https://i.etsystatic.com/27844344/r/il/1c4fc4/3410057599/il_fullxfull.3410057599_fhzn.jpg",
-    address: "Salem, Massachusetts",
+    address: "St. Helens, Oregon",
     description: "The best schools for young witches and Wizards!!!",
   });
   const witchesUniversity = await CampusesModel.create({
@@ -16,6 +16,14 @@ const seed = async () => {
     address: "Sleepy Hollow, New York",
     description:
       "The best school devoted solely to young witches. All of the best spells and potions come out of this university!",
+  });
+  const hocusPocus = await CampusesModel.create({
+    name: "Hocus Pocus Unviersity",
+    imageUrl:
+      "http://oladino.com/wp-content/uploads/2022/08/MR-oladinocom-svg030822t049-582022103125-1.jpeg",
+    address: "Salem, Massachusetts",
+    description:
+      "The best school devoted to teaching the origin spells mastered here in Salem!",
   });
   const hermione = await Students.create({
     firstName: "Hermione",
@@ -30,6 +38,8 @@ const seed = async () => {
     firstName: "Ron",
     lastName: "Weasley",
     email: "ron.weasley@hogsmeade.com",
+    imageUrl:
+      "https://s2.r29static.com/bin/entry/40a/0,46,460,460/1200x1200,80/1462467/image.jpg",
     gpa: 2.6,
     campusId: halloweentown.id,
   });
@@ -40,6 +50,13 @@ const seed = async () => {
     imageUrl: "https://i.insider.com/636c220bf5877200181c32c7?width=700",
     gpa: 3.7,
     campusId: witchesUniversity.id,
+  });
+  const aggie = await Students.create({
+    firstName: "Aggie",
+    lastName: "Cromwell",
+    email: "aggie.cromwell@halloweentown.com",
+    gpa: 3.2,
+    campusId: halloweentown.id,
   });
   db.close();
   console.log(`

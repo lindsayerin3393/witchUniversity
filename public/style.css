@@ -1,8 +1,16 @@
+#background {
+  background-image: url("https://garden.spoonflower.com/c/13539540/p/f/l/SywS69iSWergzd1_RVExsch951jZBSgeaCxKB8d_2QtuGOqL1CRr/Witchy%20Things%20in%20Black%20and%20White%20.jpg");
+  opacity: 0.2;
+}
+
 #header {
   align-items: center;
   display: flex;
   /* flex-direction: row; */
   justify-content: center;
+  /* background-image: url("https://garden.spoonflower.com/c/13539540/p/f/l/SywS69iSWergzd1_RVExsch951jZBSgeaCxKB8d_2QtuGOqL1CRr/Witchy%20Things%20in%20Black%20and%20White%20.jpg"); */
+  /* opacity: 0.2; */
+  color: black
 }
 
 #navbar {
@@ -14,10 +22,34 @@
   justify-content: space-evenly;
 }
 
+.campuses {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  opacity: 1.0;
+  z-index: -1;
+  margin-bottom: 15px;
+  /* margin: 5%; */
+}
+
 #campuses {
   align-items: center;
   display: flex;
   flex-direction: column;
+  opacity: 1.0;
+  z-index: -1;
+  margin-bottom: 15px;
+  /* margin: 5%; */
+}
+
+#students {
+  border-image: url("https://garden.spoonflower.com/c/13539540/p/f/l/SywS69iSWergzd1_RVExsch951jZBSgeaCxKB8d_2QtuGOqL1CRr/Witchy%20Things%20in%20Black%20and%20White%20.jpg");
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  opacity: 1.0;
+  z-index: -1;
+  margin: 3rem;
 }
 
 #image {
@@ -30,12 +62,19 @@
   flex-direction: row;
 }
 
+#button {
+  margin-top: 15px;
+  margin-left: 10px;
+  height: 20px;
+}
+
 .italicized {
   font-style: italic;
 }
 
 .name {
   flex-direction: center;
+  font-size: x-large;
 }
 
 .bold {
