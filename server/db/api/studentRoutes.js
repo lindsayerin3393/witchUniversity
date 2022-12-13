@@ -34,7 +34,7 @@ router.post("/", async (req, res, next) => {
 
 router.put("/:id", async (req, res, next) => {
   try {
-    const student = await Student.findByPk(req.params.id);
+    const student = await Students.findByPk(req.params.id);
     res.send(await student.update(req.body));
   } catch (error) {
     next(error);

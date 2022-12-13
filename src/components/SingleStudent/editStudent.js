@@ -8,45 +8,56 @@ import selectStudent, {
 } from "./studentSlice";
 
 const EditStudent = (props) => {
-  const { id, firstName, lastName, email } = props.student;
+  const id = props.student.id;
   // const student = useSelector(selectStudent);
-  const [newFirstName, setNewFirstName] = useState("");
-  const [newLastName, setNewLastName] = useState("");
-  const [newEmail, setNewEmail] = useState("");
+  // const { id } = useParams();
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  // const setFirstName = (id) => {
+  //   state.props.student.firstname = e.target.value;
+  // };
   const dispatch = useDispatch();
+
   const handleSubmit = async (evt) => {
     evt.preventDefault();
-    await dispatch(
-      editStudentAsync({ id, newFirstName, newLastName, newEmail })
-    );
-    setNewFirstName("");
-    setNewLastName("");
-    setNewEmail("");
-    // await dispatch(fetchStudentAsync(id));
+    await dispatch(editStudentAsync({ id, firstName, lastName, email }));
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    await dispatch(fetchStudentAsync(id));
   };
-
+  // console.log(firstName);
   return (
     <>
-      <form id="edit-student-form" key={id} onSubmit={handleSubmit}>
+      <form
+        id="edit-student-form"
+        key={props.student.id}
+        onSubmit={handleSubmit}
+      >
         <label>Edit Student First Name:</label>
         <input
           name="firstName"
-          value={newFirstName}
-          onChange={(e) => setNewFirstName(e.target.value)}
+          value={firstName}
+          type="text"
+          onChange={(e) => setFirstName(e.target.value)}
         />
 
         <label>Edit Student Last Name:</label>
         <input
+          placeholder={props.student.lastName}
           name="lastName"
-          value={newLastName}
-          onChange={(e) => setNewLastName(e.target.value)}
+          value={lastName}
+          type="text"
+          onChange={(e) => setLastName(e.target.value)}
         />
 
         <label>Edit Student Email:</label>
         <input
           name="email"
-          value={newEmail}
-          onChange={(e) => setNewEmail(e.target.value)}
+          value={email}
+          type="email"
+          onChange={(e) => setEmail(e.target.value)}
         />
 
         <button type="submit" disabled={!firstName || !lastName}>

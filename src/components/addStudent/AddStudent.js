@@ -30,12 +30,14 @@ const AddStudent = () => {
         <input
           name="firstName"
           value={firstName}
+          type="text"
           onChange={(e) => setFirstName(e.target.value)}
         />
         <label>New Student Last Name:</label>
         <input
           name="lastName"
           value={lastName}
+          type="text"
           onChange={(e) => setLastName(e.target.value)}
         />
 
@@ -43,6 +45,7 @@ const AddStudent = () => {
         <input
           name="email"
           value={email}
+          type="email"
           onChange={(e) => setEmail(e.target.value)}
         />
 

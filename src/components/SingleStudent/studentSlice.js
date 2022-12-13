@@ -17,9 +17,9 @@ export const fetchStudentAsync = createAsyncThunk(
 
 export const editStudentAsync = createAsyncThunk(
   "student/editStudent",
-  async ({ firstName, lastName, email }) => {
+  async ({ id, firstName, lastName, email }) => {
     try {
-      const { data } = await axios.put(`api/students/${id}`, {
+      const { data } = await axios.put(`/api/students/${id}`, {
         firstName,
         lastName,
         email,

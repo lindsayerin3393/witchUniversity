@@ -1,9 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const initialState = {
-  attendees: {},
-};
+const initialState = {};
 
 export const fetchCampusAsync = createAsyncThunk(
   "campuses/fetchSingle",

@@ -7,11 +7,23 @@ import EditStudent from "./editStudent";
 const Student = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
-  const student = useSelector(selectStudent);
-  const { firstName, lastName, email } = student;
+  const student = useSelector((state) => state.student);
+  // const { firstName, lastName, email } = student;
   useEffect(() => {
     dispatch(fetchStudentAsync(id));
+    console.log(student.campus);
   }, [dispatch, id]);
+  // console.log(student.campus.name);
+  // const campusArr = (student) => {
+  //   const newArr = [];
+  //   const campus = student.campus;
+  //   console.log(student.campus);
+  //   newArr.push(campus);
+  //   return newArr;
+  // };
+  // const campusArray = campusArr(student);
+  // console.log(campusArray);
+
   return (
     <div>
       <div key={student.id}>
@@ -20,16 +32,15 @@ const Student = () => {
         </h3>
         <h4>Contact Email: {student.email}</h4>
         <h4>GPA: {student.gpa}</h4>
-        <h4>Current School: </h4>
+
+        {/* <h4>Current School: {student.campus.name}</h4> */}
         {/* <div>
-          {student.campus && student.campus.length
-            ? student.campus.map((campus) => {
+          {campusArray && campusArray.length
+            ? campusArray.map((campus) => {
                 return (
                   <>
-                    <div key={campus.id}>
-                      <h4>
-                        {campus.name} {campus.address}
-                      </h4>
+                    <div>
+                      <h4>{campus.name}</h4>
                     </div>
                   </>
                 );
