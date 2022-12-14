@@ -4,19 +4,15 @@ import { useParams } from "react-router-dom";
 import { selectCampus, fetchCampusAsync } from "./campusSlice";
 import EditCampus from "./EditCampus";
 import { unregisterStudentAsync } from "../SingleStudent/studentSlice";
+import { Link } from "react-router-dom";
 
 const Campus = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
   const campus = useSelector(selectCampus);
-  // const [campusId, setCampusId] = useState("");
   useEffect(() => {
     dispatch(fetchCampusAsync(id));
   }, [dispatch, id]);
-  // const handleClick = (student) => {
-  //   student.campusId = null;
-  //   console.log(student);
-  // };
   const unregisterStudent = (student) => {
     const { id, firstName, lastName, email } = student;
     dispatch(
@@ -35,9 +31,9 @@ const Campus = () => {
           ? campus.students.map((student) => {
               return (
                 <div key={student.id} className="row">
-                  <p>
+                  <Link to={`/students/${student.id}`}>
                     {student.firstName} {student.lastName}
-                  </p>
+                  </Link>
                   <button
                     id="button"
                     onClick={() => unregisterStudent(student)}
@@ -47,7 +43,7 @@ const Campus = () => {
                 </div>
               );
             })
-          : null}
+          : "No students currently enrolled"}
       </div>
       <h3> Edit University:</h3>
       <EditCampus campus={campus} />

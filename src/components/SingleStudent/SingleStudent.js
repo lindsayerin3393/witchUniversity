@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { selectStudent, fetchStudentAsync } from "./studentSlice";
 import EditStudent from "./EditStudent";
+import { Link } from "react-router-dom";
 
 const Student = () => {
   const dispatch = useDispatch();
@@ -21,7 +22,16 @@ const Student = () => {
         <p>Contact Email: {student.email}</p>
         <p>GPA: {student.gpa}</p>
         <div>
-          {student.campus && <p>Current School: {student.campus.name}</p>}
+          {student.campus ? (
+            <p>
+              Current School:{" "}
+              <Link to={`/campuses/${student.campusId}`}>
+                {student.campus.name}
+              </Link>
+            </p>
+          ) : (
+            <p> Current School: Not Currently Enrolled </p>
+          )}
         </div>
         <img src={student.imageUrl} alt="image" id="image" />
         <h3>Update this Student's Info:</h3>
