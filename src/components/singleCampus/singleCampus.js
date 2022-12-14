@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { selectCampus, fetchCampusAsync } from "./campusSlice";
 import EditCampus from "./EditCampus";
-import { unregisterStudentAsync } from "../SingleStudent/studentSlice";
+import { unregisterStudentAsync } from "../singleStudent/studentSlice";
 import { Link } from "react-router-dom";
 
 const Campus = () => {

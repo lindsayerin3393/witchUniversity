@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addStudentsAsync } from "../studentsListSlice";
 
@@ -16,12 +15,6 @@ const AddStudent = () => {
     setLastName("");
     setEmail("");
   };
-
-  // const handleDelete = async (evt) => {
-  //   evt.preventDefault();
-  //   await dispatch(deleteTodoAsync({ id, taskName, assignee }));
-  //   navigate("/");
-  // };
 
   return (
     <>
@@ -53,13 +46,6 @@ const AddStudent = () => {
           Submit
         </button>
       </form>
-      {/* <Link to="/">Cancel</Link>
-      </form>
-      <div className="delete-button">
-        <button type="delete" onClick={handleDelete}>
-          Delete
-        </button>
-      </div> */}
     </>
   );
 };

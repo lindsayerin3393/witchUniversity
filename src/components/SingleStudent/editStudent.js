@@ -1,22 +1,12 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import selectStudent, {
-  fetchStudentAsync,
-  editStudentAsync,
-} from "./studentSlice";
+import { fetchStudentAsync, editStudentAsync } from "./studentSlice";
 
 const EditStudent = (props) => {
   const id = props.student.id;
-  // const student = useSelector(selectStudent);
-  // const { id } = useParams();
   const [firstName, setFirstName] = useState(props.student.firstName);
   const [lastName, setLastName] = useState(props.student.lastName);
   const [email, setEmail] = useState(props.student.email);
-  // const setFirstName = (id) => {
-  //   state.props.student.firstname = e.target.value;
-  // };
   const dispatch = useDispatch();
 
   const handleSubmit = async (evt) => {
@@ -44,7 +34,6 @@ const EditStudent = (props) => {
 
         <label>Edit Student Last Name:</label>
         <input
-          // placeholder={props.student.lastName}
           name="lastName"
           value={lastName}
           type="text"
@@ -53,7 +42,6 @@ const EditStudent = (props) => {
 
         <label>Edit Student Email:</label>
         <input
-          // placeholder={props.student.email}
           name="email"
           value={email}
           type="email"

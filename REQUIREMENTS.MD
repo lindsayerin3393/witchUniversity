@@ -91,11 +91,11 @@
 
 - Write a component to display a single campus with the following information:
   - [x] The campus's name, image, address and description
-  - [ ] A list of the names of all students in that campus (or a helpful message if it doesn't have any students)
+  - [x] A list of the names of all students in that campus (or a helpful message if it doesn't have any students)
 - [x] Display the appropriate campus's info when the url matches `/campuses/:campusId`
 - [x] Clicking on a campus from the campuses view should navigate to show that campus
 
-- [ ] Clicking on the name of a student in the campus view should navigate to show that student in the student view
+- [x] Clicking on the name of a student in the campus view should navigate to show that student in the student view
 
 </details>
 
@@ -105,11 +105,11 @@
 
 - Write a component to display a single student with the following information:
   - [x] The student's full name, email, image, and gpa
-  - [ ] The name of their campus (or a helpful message if they don't have one)
+  - [x] The name of their campus (or a helpful message if they don't have one)
 - [x] Display the appropriate student when the url matches `/students/:studentId`
 - [x] Clicking on a student from the students view should navigate to show that student
 
-- [ ] Clicking on the name of a campus in the student view should navigate to show that campus in the campus view
+- [x] Clicking on the name of a campus in the student view should navigate to show that campus in the campus view
 
 </details>
 
@@ -123,7 +123,7 @@
 
 <details>
 
-- [ ] Write a route to serve up a single student (based on their id), _including that student's campus_
+- [x] Write a route to serve up a single student (based on their id), _including that student's campus_
 
 </details>
 
@@ -131,7 +131,7 @@
 
 <details>
 
-- [ ] Write a route to serve up a single campus (based on its id), _including that campuses' students_
+- [x] Write a route to serve up a single campus (based on its id), _including that campuses' students_
 
 </details>
 
@@ -279,7 +279,7 @@
 - [x] Make an AJAX request that causes that campus to be updated in the database
 - [x] Update the campus in the current view without needing to refresh the page
 
-  - [ ] In the campus view, display an `Unregister` button next to each of its students, which removes the student from the campus (in the database as well as this view); hint: the student is still in the database but is no longer associated with the campus
+  - [x] In the campus view, display an `Unregister` button next to each of its students, which removes the student from the campus (in the database as well as this view); hint: the student is still in the database but is no longer associated with the campus
 
   </details>
 

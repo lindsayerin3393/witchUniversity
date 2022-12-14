@@ -35,13 +35,6 @@ const AddCampus = () => {
           Submit
         </button>
       </form>
-      {/* <Link to="/">Cancel</Link>
-      </form>
-      <div className="delete-button">
-        <button type="delete" onClick={handleDelete}>
-          Delete
-        </button>
-      </div> */}
     </>
   );
 };
