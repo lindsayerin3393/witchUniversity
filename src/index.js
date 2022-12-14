@@ -5,9 +5,6 @@ import { BrowserRouter as Router } from "react-router-dom";
 import React from "react";
 import Main from "./components/Main";
 
-/* Import and destructure main from src/component/index.js
-and anything else you may need here */
-
 const container = document.getElementById("root");
 const root = createRoot(container);
 

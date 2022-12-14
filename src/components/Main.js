@@ -11,18 +11,18 @@ const Main = () => {
       <nav>
         <div id="navbar" className="row">
           <div className="link">
-            <Link to="/students">Students!</Link>
+            <Link to="/students">Accio Students!</Link>
           </div>
           <div className="link">
-            <Link to="/campuses">Campuses!</Link>
+            <Link to="/campuses">Accio Campuses!</Link>
           </div>
         </div>
       </nav>
       <main>
         <h1 id="header">Welcome to our School Selection!</h1>
-        <p id="header">
-          Decide where you'd like to learn witchcraft and Wizardry!!!
-        </p>
+        <h3 id="header">
+          Decide where you'd like to learn Witchcraft and Wizardry!!!
+        </h3>
         <Routes>
           <Route path="/campuses" element={<Campuses />} />
           <Route path="/students" element={<StudentsList />} />

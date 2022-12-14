@@ -10,7 +10,7 @@ main::before {
   left: 0px;
   position: absolute;
   height: 460vh;
-  width: 200vh;
+  width: 250vh;
 }
 
 #header {
@@ -24,7 +24,7 @@ main::before {
 #navbar {
   width: 100%;
   height: 50px;
-  background-color: #eee;
+  background-color: black;
   color: black;
   align-items: center;
   justify-content: space-evenly;
@@ -92,4 +92,5 @@ main::before {
 
 .link {
   font-size:larger;
+  font-weight: bold;
 }

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addCampusesAsync, fetchCampusesAsync } from "../campusesSlice";
 
