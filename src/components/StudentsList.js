@@ -20,9 +20,11 @@ const StudentsList = () => {
         {students.map((student) => {
           return (
             <div key={student.id} id="students">
-              <Link to={`/students/${student.id}`}>
-                {student.firstName} {student.lastName}
-              </Link>
+              <div className="link">
+                <Link to={`/students/${student.id}`}>
+                  {student.firstName} {student.lastName}
+                </Link>
+              </div>
               <h4>Email: {student.email}</h4>
               <h4>GPA: {student.gpa}</h4>
               <img src={student.imageUrl} alt="image" id="image" />

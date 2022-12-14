@@ -20,7 +20,9 @@ const Campuses = () => {
         {campuses.map((campus) => {
           return (
             <div key={campus.id} id="campuses">
-              <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+              <div className="link">
+                <Link to={`/campuses/${campus.id}`}>{campus.name}</Link>
+              </div>
               <h4 className="italicized">{campus.address}</h4>
               <h4>{campus.description}</h4>
               <img src={campus.imageUrl} alt="image" id="image" />
@@ -44,8 +46,10 @@ const Campuses = () => {
             </div>
           );
         })}
-        <h3>Add a New University!</h3>
-        <AddCampus />
+        <div id="campuses">
+          <h3>Add a New University!</h3>
+          <AddCampus />
+        </div>
       </div>
     </div>
   );

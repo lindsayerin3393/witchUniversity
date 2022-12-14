@@ -7,13 +7,13 @@ import Campus from "./singleCampus/singleCampus";
 
 const Main = () => {
   return (
-    <div id="body">
+    <div>
       <nav>
         <div id="navbar" className="row">
-          <div>
+          <div className="link">
             <Link to="/students">Students!</Link>
           </div>
-          <div>
+          <div className="link">
             <Link to="/campuses">Campuses!</Link>
           </div>
         </div>
