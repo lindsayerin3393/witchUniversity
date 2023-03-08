@@ -50,3 +50,6 @@ You can determine views and functionality from the requirements and wireframes s
 <img src='https://github.com/FullstackAcademy/jpfp-template-V2-a/blob/main/wireframes.png' />
 
 
+Link to my final video!!! 
+ https://drive.google.com/file/d/16cttGtGO2e3swmo-d8Grw0NKTWAFr1CD/view?usp=share_link
+
